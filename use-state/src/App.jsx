@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import Card from "./Components/Card/index"
+import {CgMathPlus} from 'react-icons/cg'
+
 
 
 function App() {
@@ -11,7 +13,9 @@ function App() {
   return (
    
     <div className="App">
-      <Card result={result} setResult={setResult} number2={number2} setNumber2={setNumber2} number1={number1} setNumber1={setNumber1}/>
+      <Card result={result} setResult={setResult} number2={number2} 
+      setNumber2={setNumber2} number1={number1} setNumber1={setNumber1}/>
+    
     </div>
   )
 }

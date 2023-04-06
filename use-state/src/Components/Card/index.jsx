@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import {CgMathPlus} from 'react-icons/cg';
+import {CgMathMinus}from 'react-icons/cg';
+import {CgMathDivide}from 'react-icons/cg';
+
 import './style.scss'
 
 export default function index({
@@ -10,7 +14,9 @@ export default function index({
   setNumber2,
 }) {
   return (
-    <div>
+    <div className="container">
+
+       <div className="inp-container">
       <input
         type="number"
         onChange={(e) => setNumber1(Number(e.target.value))}
@@ -19,12 +25,20 @@ export default function index({
         type="number"
         onChange={(e) => setNumber2(Number(e.target.value))}
       />
-
-      <button onClick={() => setResult(number1 + number2)}>Topla</button>
-      <button onClick={() => setResult(number1 - number2)}>Azalt</button>
-      <button onClick={() => setResult(number1 * number2)}>Vur</button>
-      <button onClick={() => setResult(number1 / number2)}>Bol</button>
-      <h1>Cem: {result} </h1>
+        
+      
+     
     </div>
+    <div className="btn-container">
+        <button onClick={() => setResult(number1 + number2)}><CgMathPlus/></button>
+      <button onClick={() => setResult(number1 - number2)}><CgMathMinus/></button>
+      <button onClick={() => setResult(number1 * number2)}>x</button>
+      <button onClick={() => setResult(number1 / number2)}><CgMathDivide/></button>
+
+      <h1>Cem: {result} </h1>
+        </div>
+      
+    </div>
+    
   );
 }
