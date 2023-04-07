@@ -34,6 +34,8 @@ export default function index({
       <button onClick={() => setResult(number1 - number2)}><CgMathMinus/></button>
       <button onClick={() => setResult(number1 * number2)}>x</button>
       <button onClick={() => setResult(number1 / number2)}><CgMathDivide/></button>
+      <button  onClick={()=>setResult(0)}>C</button>
+      
 
       <h1>Cem: {result} </h1>
         </div>
